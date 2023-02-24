@@ -2,6 +2,7 @@ CREATE OR REPLACE FUNCTION `project_id.dataset.f_remove_acentos`(texto STRING)
 RETURNS STRING LANGUAGE js
 OPTIONS (description="Essa função recebe um texto e retorna os dados sem nenhum acento ou caracter especial.") 
 AS R"""
+// this function uses javascript to remove special chars from text.
 const letra_especial = [
         "à", "á", "â", "ã", "ä", "è", "é", "ê", "ë", "ì", "í",
         "î", "ï", "ò", "ó", "ô", "õ", "ö", "ù", "ú", "û", "ü",
